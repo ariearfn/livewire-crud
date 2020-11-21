@@ -18,6 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/sendmail', function () {
+    \Mail::to('16523137@students.uii.ac.id')
+        ->send(new \App\Mail\PostMail('Mengirim Email Menggunakan Gmail SMTP Laravel 8', 'Arie Arifin'));
+    return 'Terkirim';
+});
+
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
     Route::get('/dashboard', function() {
         return view('dashboard');
