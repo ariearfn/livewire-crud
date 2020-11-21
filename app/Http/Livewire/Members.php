@@ -84,6 +84,7 @@ class Members extends Component
          $this->name = $member->name;
          $this->email = $member->email;
          $this->phone_number = $member->phone_number;
+         $this->phone_number = $member->phone_number;
          $this->status = $member->status;
 
          $this->openModal(); //LALU BUKA MODAL
